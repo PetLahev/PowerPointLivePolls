@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="PowerPointLivePolls.UI.WPF.ServiceSettings"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="255" d:DesignWidth="300">
+    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="20" />
+            <RowDefinition Height="25" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="25" />
+            <RowDefinition Height="55" />            
+            <RowDefinition Height="35" />
+            <RowDefinition Height="5*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="120" />
+            <ColumnDefinition Width="90" />
+            <ColumnDefinition Width="90" />
+        </Grid.ColumnDefinitions>
+        
+        <Button Name="Save" Content="Save" Grid.Row="7" Grid.Column="1" Margin="5" Click="Save_Click"></Button>
+        <Button Name="Cancel" Content="Cancel" Grid.Row="7" Grid.Column="2" Margin="5,5,10,5" Click="Cancel_Click"></Button>
+        <Button Name="TestConnection" Content="Test Connection" Grid.Row="7"  Grid.Column="0" Margin="5" Click="TestConnection_Click" IsEnabled="{Binding ElementName=txtService, Path=Text.Length, Mode=OneWay}" />
+        
+        <Label Content="Set base URL of a service to get polls data from" HorizontalAlignment="Left" Margin="5,5,5,0" Grid.ColumnSpan="3" Name="lblDesc" VerticalAlignment="Bottom" Grid.Row="0" />
+        <TextBox Grid.Row="1"  Grid.ColumnSpan="3" Height="23" HorizontalAlignment="Stretch" Margin="5,0,10,5" Name="txtService" VerticalAlignment="Top" />
+        
+        <CheckBox Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Margin="7,0,0,0" Content="Use credentials for above service" VerticalAlignment="Bottom" Name="chbCredentials"></CheckBox>
+        
+        <Label Content="User name:" Height="24" HorizontalAlignment="Left" Margin="5,1,5,0" Grid.ColumnSpan="3" Name="lblUserName" VerticalAlignment="Bottom" Grid.Row="3" IsEnabled="{Binding ElementName=chbCredentials, Path=IsChecked}" />
+        <TextBox  Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Margin="5,1,10,5" Name="txtUserName" IsEnabled="{Binding ElementName=chbCredentials, Path=IsChecked}"></TextBox>
+        <Label Content="Password:" Height="24" HorizontalAlignment="Left" Margin="5,1,5,0" Grid.ColumnSpan="3" Name="lblPassword" VerticalAlignment="Bottom" Grid.Row="5" IsEnabled="{Binding ElementName=chbCredentials, Path=IsChecked}" />
+        <PasswordBox Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="3" Margin="5,0,10,20" Name="txtPassword" Height="25" IsEnabled="{Binding ElementName=chbCredentials, Path=IsChecked}"></PasswordBox>
+    </Grid>
+    
+    
+</UserControl>

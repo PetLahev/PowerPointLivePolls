@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui" onLoad="PowerPointLivePolls_Load" >
+
+  <ribbon>
+    <tabs>
+      <tab id="LivePollsTab" insertAfterMso="TabAddIns" label="Live Polls">
+        <group id="grpSettings" label="Set presentation">
+          <button id="SetPpt" getLabel="SetPptLabel" onAction="SetPptClick" size="large" getImage="GetImage" />
+          <separator id="sep1"/>
+          <button id="Settings" label="Settings" onAction="SettingsClick" size="large" getImage="GetImage" />
+        </group>
+        <group id="grpPolls" label="Set polls data">
+          <button id="InsertChart" label="Insert Chart" onAction="InsertChartClick" size="large" getImage="GetImage" />
+          <button id="InsertTable" label="Insert Table" onAction="InsertTableClick" size="large" getImage="GetImage" />
+          <separator id="sep2"/>
+          <button id="SetAsset" label="Set answers" getEnabled="SetAssetEnabled" onAction="SetAssetClick" size="large" getImage="GetImage" />
+        </group>
+        <group id="grpAbout">          
+          <button id="About" label="About" onAction="AboutClick" size="large" getImage="GetImage"/>
+        </group>
+
+      </tab>
+    </tabs>
+  </ribbon>
+
+  <contextMenus>
+    <contextMenu idMso="ContextMenuSlideShow" >
+      <menuSeparator id="mnusep1"/>
+      <menu id ="mnuLiveMenu" label="Get live data" getEnabled="mnuLiveMenuEnable" >
+
+        <button id="LiveDataBtn1"
+                onAction="LiveDataBtnClick"
+                getLabel="Btn1Label"
+                getVisible="Btn1Visible"/>
+
+        <button id="LiveDataBtn2"
+                onAction="LiveDataBtnClick"
+                getLabel="Btn2Label"
+                getVisible="Btn2Visible"/>
+
+        <button id="LiveDataBtn3"
+                onAction="LiveDataBtnClick"
+                getLabel="Btn3Label"
+                getVisible="Btn3Visible"/>
+
+        <button id="LiveDataBtn4"
+                onAction="LiveDataBtnClick"
+                getLabel="Btn4Label"
+                getVisible="Btn4Visible"/>
+
+        <button id="LiveDataBtn5"
+                onAction="LiveDataBtnClick"
+                getLabel="Btn5Label"
+                getVisible="Btn5Visible"/>
+
+      </menu>
+
+    </contextMenu>
+  </contextMenus>
+
+</customUI>
+

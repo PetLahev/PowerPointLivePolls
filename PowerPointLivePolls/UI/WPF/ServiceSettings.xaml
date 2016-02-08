@@ -18,9 +18,9 @@
             <RowDefinition Height="5*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="120" />
-            <ColumnDefinition Width="90" />
-            <ColumnDefinition Width="90" />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
         </Grid.ColumnDefinitions>
         
         <Button Name="Save" Content="Save" Grid.Row="7" Grid.Column="1" Margin="5" Click="Save_Click"></Button>

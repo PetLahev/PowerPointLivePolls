@@ -60,10 +60,10 @@ namespace PowerPointLivePolls
 
             //Core.Metadata.Deserialize(ppt);
 
-            Core.Metadata test = new Core.Metadata(ppt);
-            MessageBox.Show(test.HasProjects.ToString());
-            //UI.Settings str = new UI.Settings();
-            //str.ShowDialog();
+            //Core.Metadata test = new Core.Metadata(ppt);
+            //MessageBox.Show(test.HasProjects.ToString());
+            UI.Settings str = new UI.Settings();
+            str.ShowDialog();
         }
 
         public string SetPptLabel(Office.IRibbonControl control)

@@ -12,8 +12,7 @@ namespace PowerPointLivePolls.Test.Mocks
         private Mock<CustomXMLParts> _mockXmlParts;
         
         private IList<CustomXMLPart> _parts = new List<CustomXMLPart>();
-        private IList<string> _projects = new List<string>();
-
+        
         public MockPollsProjectsBuilder()
         {
             _ppt = CreatePptMock();            
@@ -31,13 +30,15 @@ namespace PowerPointLivePolls.Test.Mocks
 
         /// <summary>Add a new PollLiveData ns to existing custom parts</summary>
         /// <param name="id"></param>
-        public void AddOnePollProject(string id)
-        {
-            _parts = new List<CustomXMLPart>();
-            string projectBase = string.Format("<Project><Id>{0}</Id></Project>", id);
-            _projects.Add(projectBase);
+        public void AddOnePollProject(string[] ids)
+        {            
+            var projects = new List<string>();
+            foreach (string id in ids)
+            {
+                projects.Add(string.Format("<Project><Id>{0}</Id></Project>", id));
+            }            
 
-            string projectXml = string.Join("", _projects);
+            string projectXml = string.Join("", projects);
             string xml = string.Format("<PollProjects xmlns:lp=\"LivePollsData\"><Projects>{0}</Projects></PollProjects>",projectXml);
             
             var mappingList = new List<CustomXMLPrefixMapping>();

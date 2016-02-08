@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using PPT = Microsoft.Office.Interop.PowerPoint;
-using Microsoft.Office.Core;
+﻿using Microsoft.Office.Core;
 using PowerPointLivePolls.BusinessObjects;
-using System.Xml.Serialization;
-using System.Xml;
+using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
+using System.Xml;
+using System.Xml.Serialization;
+using PPT = Microsoft.Office.Interop.PowerPoint;
 
 namespace PowerPointLivePolls.Core
 {
@@ -77,7 +76,7 @@ namespace PowerPointLivePolls.Core
             return data;
         }
 
-        public bool Save(BusinessObjects.PollProjects data)
+        public bool Save(PollProjects data)
         {
             try 
 	        {
@@ -91,6 +90,8 @@ namespace PowerPointLivePolls.Core
 	        }
         }
 
+        /// <summary>Removes all custom parts that have Poll namespace</summary>
+        /// <returns>True if succeeded otherwise false</returns>
         public bool RemoveAll()
         {
             try
@@ -118,12 +119,11 @@ namespace PowerPointLivePolls.Core
                 throw;
             }
         }
-
-
+        
         /// <summary>Serializes PollProjects object to string</summary>
         /// <param name="data">to be serialized</param>
         /// <returns>serialized string or null</returns>
-        public string Serialize(PollProjects data)
+        private string Serialize(PollProjects data)
         {
             try
             {
@@ -153,7 +153,7 @@ namespace PowerPointLivePolls.Core
         /// <summary>Desterilizes string to Poll Projects data</summary>
         /// <param name="data">string to be serialized</param>
         /// <returns>instance of the PollProjects data or null</returns>
-        public PollProjects Deserialize(string data)
+        private PollProjects Deserialize(string data)
         {
             PollProjects retVal = null;
             if (string.IsNullOrWhiteSpace(data)) return retVal;            

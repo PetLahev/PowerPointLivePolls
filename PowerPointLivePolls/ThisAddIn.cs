@@ -35,10 +35,9 @@ namespace PowerPointLivePolls
         }
 
         private void ThisAddIn_Shutdown(object sender, System.EventArgs e)
-        {            
+        {
             _app = null;
         }
-
         #region VSTO generated code
 
         /// <summary>

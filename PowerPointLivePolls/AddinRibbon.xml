@@ -15,7 +15,7 @@
           <separator id="sep2"/>
           <button id="SetAsset" label="Set answers" getEnabled="SetAssetEnabled" onAction="SetAssetClick" size="large" getImage="GetImage" />
         </group>
-        <group id="grpAbout">          
+        <group id="grpAbout">
           <button id="About" label="About" onAction="AboutClick" size="large" getImage="GetImage"/>
         </group>
 
@@ -59,4 +59,3 @@
   </contextMenus>
 
 </customUI>
-

@@ -55,9 +55,9 @@ namespace PowerPointLivePolls
         public void SettingsClick(Office.IRibbonControl control)
         {
             var ppt = Globals.ThisAddIn.Application.ActivePresentation;
-            
+
             //Core.Metadata.Serialize(new BusinessObjects.PollProject() { Name = "Tomas" }, ppt);
-            
+
             //Core.Metadata.Deserialize(ppt);
 
             Core.Metadata test = new Core.Metadata(ppt);
@@ -131,20 +131,20 @@ namespace PowerPointLivePolls
         {
             switch (control.Id)
             {
-                case "About":     
+                case "About":
                     return Properties.Resources.info;
-                case "SetPpt":     
+                case "SetPpt":
                     return Properties.Resources.PptSettings;
-                case "Settings":     
+                case "Settings":
                     return Properties.Resources.settings;
-                case "InsertChart":     
+                case "InsertChart":
                     return Properties.Resources._3d_bar_chart;
-                case "InsertTable":     
+                case "InsertTable":
                     return Properties.Resources.table;
                 default:
                     return Properties.Resources.under_construction;
             }
-            
+
         }
 
         #endregion

@@ -163,6 +163,8 @@
   <ItemGroup>
     <Compile Include="AddinRibbon.cs" />
     <Compile Include="BusinessObjects\Answer.cs" />
+    <Compile Include="BusinessObjects\CommandNotImplemented.cs" />
+    <Compile Include="BusinessObjects\ICommand.cs" />
     <Compile Include="BusinessObjects\IMenuItems.cs" />
     <Compile Include="BusinessObjects\PollProject.cs" />
     <Compile Include="BusinessObjects\PollProjects.cs" />
@@ -172,11 +174,20 @@
     <Compile Include="BusinessObjects\Sessions.cs" />
     <Compile Include="Core\Metadata.cs" />
     <Compile Include="Core\PptEventHandlers.cs" />
+    <Compile Include="Core\SettingProject\ProjectModel.cs" />
     <Compile Include="Exceptions\ServiceException.cs" />
     <Compile Include="I18\ResManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="RibbonFactory.cs" />
+    <Compile Include="UI\Container.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Container.Designer.cs">
+      <DependentUpon>Container.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\IContainer.cs" />
     <Compile Include="UI\ProgressBar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,6 +202,9 @@
     </Compile>
     <Compile Include="UI\WPF\ProgressBar.xaml.cs">
       <DependentUpon>ProgressBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WPF\Projects.xaml.cs">
+      <DependentUpon>Projects.xaml</DependentUpon>
     </Compile>
     <Compile Include="UI\WPF\ServiceSettings.xaml.cs">
       <DependentUpon>ServiceSettings.xaml</DependentUpon>
@@ -207,6 +221,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI\Container.resx">
+      <DependentUpon>Container.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\ProgressBar.resx">
       <DependentUpon>ProgressBar.cs</DependentUpon>
     </EmbeddedResource>
@@ -244,6 +261,10 @@
     <Page Include="UI\WPF\ProgressBar.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\WPF\Projects.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UI\WPF\ServiceSettings.xaml">
       <Generator>MSBuild:Compile</Generator>

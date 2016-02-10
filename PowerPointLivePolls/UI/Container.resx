@@ -117,22 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="NoData" xml:space="preserve">
-    <value>The service could not get any data!{0}</value>
-    <comment>{0} - message from server</comment>
-  </data>
-  <data name="NotImplemented" xml:space="preserve">
-    <value>This function is not implemented yet</value>
-  </data>
-  <data name="ProjectsFormCaption" xml:space="preserve">
-    <value>Assign presentation to project</value>
-  </data>
-  <data name="SetPpt" xml:space="preserve">
-    <value>Set presentation to a poll</value>
-    <comment>Ribbon button</comment>
-  </data>
-  <data name="SetPptChange" xml:space="preserve">
-    <value>Change poll</value>
-    <comment>Ribbon button when already set to a poll</comment>
-  </data>
 </root>

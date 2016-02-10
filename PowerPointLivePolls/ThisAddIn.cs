@@ -10,15 +10,14 @@ namespace PowerPointLivePolls
 {
     public partial class ThisAddIn
     {
-        private PowerPoint.Application _app;
-        internal protected PowerPoint.Application PPTApplication
+        private static PowerPoint.Application _app;
+        internal static PowerPoint.Application PPTApplication
         {
             get { return _app; }
         }
-
-
-        private Core.PptEventHandlers _eventHandler;
-        internal protected Core.PptEventHandlers EventHandler
+        
+        private static Core.PptEventHandlers _eventHandler;
+        internal static Core.PptEventHandlers EventHandler
         {
             get { return _eventHandler; }
         }
@@ -38,6 +37,7 @@ namespace PowerPointLivePolls
         {
             _app = null;
         }
+
         #region VSTO generated code
 
         /// <summary>

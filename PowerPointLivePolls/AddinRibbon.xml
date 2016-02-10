@@ -5,18 +5,18 @@
     <tabs>
       <tab id="LivePollsTab" insertAfterMso="TabAddIns" label="Live Polls">
         <group id="grpSettings" label="Set presentation">
-          <button id="SetPpt" getLabel="SetPptLabel" onAction="SetPptClick" size="large" getImage="GetImage" />
+          <button id="SetPpt" getLabel="SetPptLabel" onAction="RibbonButtontClick" size="large" getImage="GetImage" />
           <separator id="sep1"/>
-          <button id="Settings" label="Settings" onAction="SettingsClick" size="large" getImage="GetImage" />
+          <button id="Settings" label="Settings" onAction="RibbonButtontClick" size="large" getImage="GetImage" />
         </group>
         <group id="grpPolls" label="Set polls data">
-          <button id="InsertChart" label="Insert Chart" onAction="InsertChartClick" size="large" getImage="GetImage" />
-          <button id="InsertTable" label="Insert Table" onAction="InsertTableClick" size="large" getImage="GetImage" />
+          <button id="InsertChart" label="Insert Chart" onAction="RibbonButtontClick" size="large" getImage="GetImage" />
+          <button id="InsertTable" label="Insert Table" onAction="RibbonButtontClick" size="large" getImage="GetImage" />
           <separator id="sep2"/>
-          <button id="SetAsset" label="Set answers" getEnabled="SetAssetEnabled" onAction="SetAssetClick" size="large" getImage="GetImage" />
+          <button id="SetAsset" label="Set answers" getEnabled="SetAssetEnabled" onAction="RibbonButtontClick" size="large" getImage="GetImage" />
         </group>
         <group id="grpAbout">
-          <button id="About" label="About" onAction="AboutClick" size="large" getImage="GetImage"/>
+          <button id="About" label="About" onAction="RibbonButtontClick" size="large" getImage="GetImage"/>
         </group>
 
       </tab>
